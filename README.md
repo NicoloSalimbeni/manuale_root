@@ -1,0 +1,1 @@
+manuale_root
