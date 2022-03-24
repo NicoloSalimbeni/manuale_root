@@ -1,0 +1,46 @@
+\chapter{FIT}
+In questa sezione vediamo come fare dei fit, la logica è la stessa per tutti gli oggetti che hanno una funzione Fit, di seguito si farà riferimento ad un istogramma generico h pcome oggetto da fittare, ma questo potrebbe essere benissimo anche un TGraph o un TGraphErrors ad esempio (questo non è del tutto vero se si vuole approfondire l'argomento, ma le opzioni base, che sono le sole riportate, sono comuni a tutti gli oggetti che ci interessano).\\
+La funzione generale per eseguire un fit è nella fomra:
+\begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
+h->Fit (TF1 * f1,
+Option_t *  	option = "",
+Option_t *  	goption = "",
+Double_t  	xmin = 0,
+Double_t  	xmax = 0 
+) 	
+\end{lstlisting}
+Dove f1 è la funzione con cui eseguire il fit, option è una stringa che specifica le opzioni del fit, goption una stringa con le opzioni grafiche, mentre xmin e xmax sono il reange entro cui viene eseguito il fit. Vediamo pezzo per pezzo le opzioni più rilevanti.\\
+La funzione per eseguire il fit base dell'oggetto h attraverso il TF1 f è:
+\begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
+	h->Fitt(f);
+\end{lstlisting}
+L'algoritmo di defaul per trovare i parametri ricercati è la minimizzazione del $\chi^2$. Il range predefinito è quello di definizione dell'istogramma. Ultima cosa a cui presare attenzione è che in questo modo verrà memorizzato solo l'ultimo fit eseguito rimuovendo i precedenti, se quindi si volessero fare più fit su uno stesso grafico sarà necessario cambiare le opzioni manualmente.\\
+\section{Fit options}
+Le opzioni più utili sono:
+\begin{itemize}
+	\item "R" : prende il range di definizione del TF1, fa il fit solo per i punti in quell'intervallo, e stampa il grafico in quell'intervallo
+	\item "+" : se sono stati fatti fit precedenti, solitamente viene stampato solo l'ultimo, se invece metti il + allora questo fit non sovrascive i precedenti e nel plot lì troverai tutti
+	\item "0" : se vuoi fare il fit, ma vuoi evitare di stamparlo sul plot
+	\item "S" : nel ritornare i risultati (vedi gestione risultati) nel TFitResult vengono salvate tutti le possibili informazioni, tra cui la matrice di covarianza, alla quale normalmente non sarebbe possibile accedere
+\end{itemize}
+
+\subsection{Gestione dei risultati}
+La funzione Fit oltre a fare il fit ritorna anche un oggetto specifico per la gestione dei risultati di quest'ultimo (TFitResultPtr, che è essenzialmente un puntatore ad un oggetto di tipo TFitResult). Il modo più rapido quindi per recuperare tutte le informazioni rilevanti è il seguente:
+\begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
+	TFitResultPtr r = h->Fit(myFunc,"S");
+	TMatrixDSym cov = r->GetCovarianceMatrix();  //  matrice di covarianza
+	Double_t chi2 = r->Chi2(); // chi2
+	Double_t par0 = r->Parameter(0); // ritorna il parametro 0
+	Double_t err0 = r->ParError(0); // ritorna l'errore del parametro 0
+	r->Print("V");     // stampa tutte le informazioni possibili
+	r->Write();        // salva i risultati in un file
+\end{lstlisting}
+L'oggetto r potrà poi essere salvato in un TFile, i fit a livello computazionale possono essere molto onerosi, in questo modo se in futuro si dovessero recuperare i risultati di un fit invece di rieseguirlo sarà suffciente leggerli all'interno del TFitResult salvato nel TFile.
+\section{Tips}
+\textbf{Fare il fit in un range, poi stampare f in un altro range:} la cosa più comoda è prima fare come segue:
+\begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
+	h->Fit(f,"0","",xmin,xmax);
+	f->SetRange(xinf,xsup);
+	f->Draw();
+\end{lstlisting}
+in questo modo si calcola f, si seìceglie il range desiderato per il plot e poi la si stampa.
