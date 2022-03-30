@@ -1,6 +1,7 @@
 \contentsline {chapter}{\numberline {1}INTRODUZIONE}{5}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Richiami di C++ TODO}{6}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Consigli per la lettura}{6}{section.1.2}%
+\contentsline {section}{\numberline {1.2}Basi per capire cosa sta succedendo}{6}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Consigli per la lettura}{6}{section.1.3}%
 \contentsline {chapter}{\numberline {2}OGGETTI PRINCIPALI}{7}{chapter.2}%
 \contentsline {section}{\numberline {2.1}TVectorD}{7}{section.2.1}%
 \contentsline {section}{\numberline {2.2}TH1}{7}{section.2.2}%
@@ -12,17 +13,18 @@
 \contentsline {subsection}{\numberline {2.4.1}Vari modi per definire la funzione che si vuole usare}{10}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Valutare un funzione e le sue derivate}{12}{subsection.2.4.2}%
 \contentsline {section}{\numberline {2.5}TFile}{13}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Lettura}{13}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Scrittura}{13}{subsection.2.5.2}%
-\contentsline {section}{\numberline {2.6}TNtuple}{14}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Inserimento e recupero dati}{14}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Stampare a schermo informazioni utili}{15}{subsection.2.6.2}%
-\contentsline {subsection}{\numberline {2.6.3}Ricavare grafici da un TNtuple}{15}{subsection.2.6.3}%
-\contentsline {section}{\numberline {2.7}TTree}{16}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Recupero dati salvati in un TTree}{17}{subsection.2.7.1}%
-\contentsline {chapter}{\numberline {3}PLOT GRAFICI TODO}{19}{chapter.3}%
-\contentsline {chapter}{\numberline {4}FIT}{21}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Fit options}{22}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Gestione dei risultati}{22}{subsection.4.1.1}%
-\contentsline {section}{\numberline {4.2}Tips}{22}{section.4.2}%
-\contentsline {chapter}{\numberline {5}CONCLUSIONI TODO}{25}{chapter.5}%
+\contentsline {subsection}{\numberline {2.5.1}Scrittura e creazione}{13}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Lettura}{14}{subsection.2.5.2}%
+\contentsline {section}{\numberline {2.6}Gestione oggetti all'interno di un TFile}{15}{section.2.6}%
+\contentsline {section}{\numberline {2.7}TNtuple}{17}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Inserimento e recupero dati}{18}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Stampare a schermo informazioni utili}{18}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.3}Ricavare grafici da un TNtuple}{19}{subsection.2.7.3}%
+\contentsline {section}{\numberline {2.8}TTree}{20}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}Recupero dati salvati in un TTree}{20}{subsection.2.8.1}%
+\contentsline {chapter}{\numberline {3}PLOT GRAFICI TODO}{23}{chapter.3}%
+\contentsline {chapter}{\numberline {4}FIT}{25}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Fit options}{26}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Gestione dei risultati}{26}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Tips}{26}{section.4.2}%
+\contentsline {chapter}{\numberline {5}CONCLUSIONI TODO}{29}{chapter.5}%
