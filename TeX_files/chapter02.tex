@@ -278,6 +278,7 @@ I primi due argomenti sono intuitivi e non necessitano di spiegazioni, per la li
 	TNtuple *nt = new TNtuple("event_decay","posizione decadimenti","n_eve:x:y:z"); //costruttore
 	nt->GetEntries() //stampa il numero di eventi inseriti
 \end{lstlisting}
+Inoltre quando in un TFile sono presenti più versioni di un oggetto è necessario spcificare quale/i versioni si desidera eliminare, chiamare un Delete("nome") generico non avrà alcun effetto.
 
 
 \subsection{Inserimento e recupero dati}
