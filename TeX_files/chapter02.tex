@@ -155,44 +155,115 @@ Se si vuole aumentare la precisione perchè la funzione è particolarmente stran
 dove 0 è un valore di default che non va modificato e k è il parametro usato nell'algoritmo. Senza spiegre come funziona l'algoritmo che deriva basta sapere che più è piccolo più la derivata sarà precisa, il valore di default è 0.001. Se si vogliono maggiori informazioni sia su come viene calcolata la derivata sia sul significato dei parametri leggere il manuale ufficiale di root per la classe TF1 e cercare la funzione Derivative a questo  \href{https://root.cern.ch/doc/master/classTF1.html#a59c6f24c0b4d4987e46a83ba0b1f26fa}{link}.
 
 \section{TFile}
-Permette di salvare dei file (con estensione .root) che contengono varie informazioni e oggetti. Possono contenere isotogrammi, funzioni, set di dati ecc... Questo permette di non dover ricaricare ogni volta tutti i dati e rifare tutta l'analisi per avere determinati valori: se costruisco una volta un istogramma e salvo tutto in un TFile la volta dopo quando mi servirà non devo ricaricare i dati, mi basterà prendere quello salvato che contiene già tutto.
-\subsection{Lettura}
-\begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
-	TFile* file = new TFile("nome file","READ");
-	TH1D* h = (TH1D*)file->Get("nome oggetto");
-\end{lstlisting}
-Nella seconda riga è necessaria una conversione perchè la funzione Get ritorna un TObject*, tutti gli oggetti in root sono una derivata da questa classe, di conseguenza così va sul sicuro, tu però poiché sai il tipo effettivo dell'oggetto puoi direttemante convertire il puntatore al tipo corretto (in questo caso un TH1D*).
-\subsection{Scrittura}
+
+TO DO:\\
+TBrowser\\
+
+Permette di salvare dei file (con estensione .root) che contengono varie informazioni e oggetti. Possono contenere isotogrammi, funzioni, set di dati ecc... Questo per non dover ricaricare ogni volta tutti i dati e rifare tutta l'analisi per avere determinati valori: se costruisco una volta un istogramma e salvo tutto in un TFile la volta dopo quando mi servirà non devo ricaricare i dati, mi basterà prendere quello salvato che contiene già tutto.
+
+\subsection{Scrittura e creazione}
+Il costruttore per un TFile è il seguente:
 \begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
 	TFile* file= new TFile("nome.root","opzione");
+	file->cd(); //opzionale
 \end{lstlisting}
+In questo modo nella cartella in cui si è eseguito root verrà creato il file "nome.root".\\ Vediamo quindi cosa scrivere al posto di "opzione":
+
 \begin{table}[h]
-\begin{tabular}{|c|c|}
-	\hline
-	opzione	& descrizione \\
-	\hline
-	NEW  oppure CREATE	& crea il file se non esiste, altrimenti non fa nulla \\
-	\hline
-	RECREATE	& crea il file, se esiste lo sovrascrive \\
-	\hline
-	UPDATE	& apre un file per la modifica, se non lo trova lo crea \\
-	\hline
-\end{tabular}
+	\begin{tabular}{|c|c|}
+		\hline
+		opzione	& descrizione \\
+		\hline
+		NEW  oppure CREATE	& crea il file se non esiste, altrimenti non fa nulla \\
+		\hline
+		RECREATE	& crea il file, se esiste lo sovrascrive \\
+		\hline
+		UPDATE	& apre un file esistente, se non lo trova lo crea \\
+		\hline
+		REED	& apre un file in sola lattura \\
+		\hline
+	\end{tabular}
+\label{tab:TFile_options}
+\caption{\centering opzioni comuni (ma non le uniche) per il costruttore di un TFILE}
 \end{table}
-Per dire a root che si vuole utilizzare un certo TFile come output è necessario eseguire questa funzione:
+Ma a cosa serve il comando file-$>$cd()? Tra le varie funzioni che si possono usare in root alcune riguardano i TFile, ma non si riferiscono ad un TFile specifico. Un esempio che vedremo subito è la funzione Write(), questa non sa in quale TFile salvare un oggetto se ce ne sono definiti più di uno, cd() dice a root che da lì in poi a meno che non sia esplicito per qualche motivo quando si lancia un comando o una funzione che si riferiscono ad un TFile si riferiranno al TFile corrente "file".\\
+Per salvare i vari oggetti di root questi hanno una funzione chiamata Write, sarà quindi sufficiente, solo dopo aver creato il file di output, chiamare ad esempio:
 \begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
-	file->cd();
-\end{lstlisting}
-Da questa linea in poi sarà possibile scrivere nel TFile "file".\\
-I vari oggetti di root hanno una funzione chiamata Write, sarà quindi sufficiente, solo dopo aver creato il file di output, chiamare ad esempio:
-\begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
+	hist->SetNameTitle("nome","titolo"); // se non e' gia' stato fatto
+	file->cd(); //se non e' stato gia' fatto
 	hist->Write();
-	canvas->Write();
 \end{lstlisting}
-Ora si capisce perchè è necessario il comando cd(), qualora siano presenti più TFile nello stesso sorgente il comando Write() sono sa in quale di questi scrivere. Utilizzando il comando cd() da lì in poi Write scriverà nel TFile selezionato fino a nuovo ordine.\\
+Qui è chiaro a cosa serve il comando cd(), nella funzione Write() non si esplicita in alcun modo in quale TFile scrivere. Utilizzando il comando cd() da lì in poi Write scriverà nel TFile selezionato fino a nuovo ordine.\\
+Se si desidera scrivere l'oggetto nel TFile file2 sarà sufficiente chiamare file2-$>$cd() e poi eseguire di nuovo Write().\\
+La funzione SetNameTitle invece serve per impostare appunto un nome e un titolo agli oggetti, questi attributi sono quelli che verranno salvati nel TFile e che ci permetteranno di riconoscere l'oggetto "hist" nel TFile in futuro, per questo è caldamente consigliato impostarli sempre (in ogni caso root ne mette di defualt per sicurezza).\\
+Le funzioni principali per gestire nome e titolo sono le seguenti:
+\begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
+	Object *obj;
+	obj->SetNameTitle("nome","titolo");
+	obj->SetName("nome");
+	obj->SetTitle("titolo");
+\end{lstlisting}
+Root in automatico associa un nome e un titolo agli oggetti definiti, ma questi sono sempre gli stessi per tutti i TH1D tutti i TF1 ecc... quindi salvare oggetti diversi dello stesso tipo con stessi nome e titolo rende molto fastidioso reuperarli, in quanto saranno difficili da distinguere. Ecco perché è buona norma impostarli prima di chiamare Write().\\
 Infine una volta finito di salvare sul file questo va chiuso con
 \begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
 	file->Close();
+\end{lstlisting}
+{\color{red} \rule{\linewidth}{0.5mm}}
+\textcolor{red}{\textbf{Attenzione:}} eseguire Close è fondamentale. Se si esce da root senza chiamare Close() nel 99\% dei casi andrà tutto liscio perchè quando possibile root lo fa in automatico. Se però ad esempio si chiude il terminale su cui si sta eseguendo root Close() non viene chiamata è tutte le modifiche vengono perse irrecuperabilmente.\\
+{\color{red} \rule{\linewidth}{0.5mm}}
+
+\subsection{Lettura}
+\begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
+	TFile* file = new TFile("nome file","opzione"); //crea l'oggetto
+	file->cd();
+\end{lstlisting}
+Questo comando in generale crea l'oggetto file, al posto di "opzione" mettere l'opzione che si desidera tra UPDATE e REED (vedi tabella \ref{tab:TFile_options}) che potrà poi essere utilizzato di seguito. Per sapere però cosa c'è dentro è possibile proseguire in due modi, o si usa un TBrowser (vedremo di seguito cosa è e come si usa), oppure si usa l'interprete da riga di comando e il comando ".ls". Con il TBrowser è possibile nagivare al suo interno come fosse una cartella, con il comando .ls invece a schermo verrà stampato il suo contenuto.\\
+".ls" è un altro esempio del perché è necessario chiamare cd(), con .ls non si specifica in alcun modo di che TFile mostrare il contenuto, e a schermo verrà stampato quello del TFile corrente che va impostato in precedeza.\\
+A questo punto sappiamo come vedere cosa c'è all'interno di un TFile, vediamo ora come recuperare il suo contenuto per utilizzarlo:
+\begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
+	TH1D* h = (TH1D*)file->Get("nome oggetto");
+\end{lstlisting}
+Per questo comando è necessaria una conversione perchè la funzione Get ritorna un TObject*, tutti gli oggetti in root sono una derivata di questa classe, di conseguenza così va sul sicuro, tu però poiché sai il tipo effettivo dell'oggetto che stai copiando puoi direttemante convertire il puntatore al tipo corretto (in questo caso un TH1D*).
+Questo metodo è il più esplicito ma in realtà è possibile lasciar fare tutto a root in background, se nel TFile c'è un istogramma chiamato "h" dopo aver creato il TFile e aver eseguito il relativo cd() sarà possibile utilizzare l'istogramma semplicemente con il suo nome: sarà possibile eseguire h-$>$Draw() h-$>$Fill() ecc... lasciando fare in background a root tutte le operazioni di copia.
+{\color{red} \rule{\linewidth}{0.5mm}}
+\textcolor{red}{\textbf{Attenzione:}} Questo metodo è un po' fuorviante, se ad esempio da un TFile si lascia fare tutto a root in background sarebbe naturale pensare che chiamando ad esempio h-$>$Fill(3) nel TFile l'istogramma abbia un conteggio in più nel bin che contiene 3, ma così non è. Non si sta modificando l'oggetto contenuto nel TFile ma una sua copia con lo stesso nome. Per salvare eventuali modifiche bisogna ricordare si chiamare h-$>$Write()\\
+{\color{red} \rule{\linewidth}{0.5mm}}
+
+\section{Gestione oggetti all'interno di un TFile}
+Il TFile non va interpretato come una "cartella" di un file manager in cui gli oggetti si possono rinominare o modificare direttamente. È più una "foto" degli elementi che contiene. Questi elementi possono essere copiati per essere utilizzati altrove o eliminati, ma non possono essere direttamente modificati. Vediamo per passi come gestire un TFile:\\
+\textbf{Inserimento}: per aggiungere un oggetto basta seguire la procedura descritta precedentemente, questo nel file sarà riconducibile ad un nome e un titolo.\\
+
+\textbf{Salvare più volte oggetti con lo stesso nome:} Questa situazione può presentarsi in due occasioni: nel TFile c'è una versione precedente di un oggetto, questo è stato copiato, modificato, e ora va ri-salvato senza modificare nome e titolo, chiamiamo questa situazione "aggiornamento", oppure non sono stati impostati nome e titolo personalizzati per due oggetti distinti (esempio due istogrammi) e salvandoli nel TFile sembra che lo stesso oggetto sia stato salvato due volte (con nome e titolo di defaul), chiamiamo questa situazione "errore nomi". Vediamo prima come root gestisce i salvataggi nel TFile e poi valutiamo le due situazioni precedenti.\\
+I TFile in automatico non sovrascrivono gli oggetti, qualora si salvasse più volte un oggetto con lo stesso nome (ad esempio "istogramma") chiamando .ls nel TFile risulteranno più oggetti "istogramma" con nomi: "istogramma;1" "istogramma;2" e così via. Nel TFile vengono salvate tutte le versioni di un oggetto in modo da poter recuperare le precedenti in caso di errore. Per distinguerli quando si chiama la funzione Get è sufficiente scrivere:
+\begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
+	TH1D *h = (TH1D *)file->Get("istogramma;1");
+	//oppure
+	TH1D *h = (TH1D *)file->Get("istogramma;2");
+\end{lstlisting}
+La chiamata con Get("istogramma") ritornerà in automatico l'ultima versione disponibile, in questo caso la 2. Vediamo ora come gestire le due situazioni iniziali con oggetti di tipo TH1D come esempio:\\
+\begin{itemize}
+	\item \textbf{Aggiornamento:} dopo aver copiato, e modificato un TH1D di un TFile questo va risalvato con Write(), nel TFile comparità la sua versione "istogramma;2" e tutto è filato liscio. A questo punto si può eliminare la versione precedente oppure lasciare tutto così come è.
+	\item  \textbf{errore nomi:} per sbaglio due oggetti distinti di tipo TH1D con nome di default sono stati salvati in un TFile, all'interno di questo, poichè hanno stesso nome risultano essere due versioni di uno stesso oggetto: "istogramma;1" e "istogramma;2". Non c'è modo di rinominare direttamente uno dei due per renderli distinguibili, per risolvere il problema bisogna fare quanto segue:
+\begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
+TH1D *h = (TH1D *)file->Get("istogramma;1");
+h->SetName("nome personalizzato");
+h->Write();
+file->Delete("istogramma;1");
+\end{lstlisting}
+in questo modo si copia l'oggetto, gli si da un nome personalizzato, lo si salva di nuovo nel file, e si elimina il corrispettivo con quello di defualt. Questa procedura va fatta almeno per uno dei due così da distinguerli, poi è consigliato farla su entrambi per maggiore chiarezza.\\
+{\color{blue} \rule{\linewidth}{0.5mm}}
+\textcolor{blue}{\textbf{Nota:}} Il titolo non concorre a questo problema di riconoscimento, se due oggetti hanno lo stesso nome e titolo diversi comunque nel TFile verranno create le versioni 1 e 2, ma almeno all'utente a prima vista queste saranno distinguibili tramite il titolo. Se invece anche questo è lo stesso tra le versione dell'oggetto l'unico modo per distinguerle è vedere cosa c'è dentro\\
+{\color{blue} \rule{\linewidth}{0.5mm}}
+\end{itemize}
+
+\textbf{Cancellare oggetti in un TFile:} per questo esiste la funzione Delete(). Vediamo qualche esempio:
+\begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
+	TFile *f=new TFile("file.root","UPDATE");
+	.....
+	f->Delete("nome"); //cancella l'oggetto "nome"
+	f->Delete("nome;1") //cancella la versione 1 di "nome"
+	f->Delete("*;1") //cancella la versione 1 di tutti gli oggetti
+	f->Delete("nome;*") // cancella tutte le versioni di "nome"
 \end{lstlisting}
 
 \section{TNtuple}
