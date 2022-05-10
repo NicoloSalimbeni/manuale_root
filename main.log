@@ -1,25 +1,25 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.27)  30 MAR 2022 17:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.4.18)  10 MAY 2022 11:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
 LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2021-11-22>
+L3 programming layer <2022-02-24>
 (/usr/share/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2021/10/04 v1.4n Standard LaTeX document class
 (/usr/share/texmf-dist/tex/latex/base/bk12.clo
 File: bk12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count183
-\c@chapter=\count184
-\c@section=\count185
-\c@subsection=\count186
-\c@subsubsection=\count187
-\c@paragraph=\count188
-\c@subparagraph=\count189
-\c@figure=\count190
-\c@table=\count191
+\c@part=\count185
+\c@chapter=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\c@figure=\count192
+\c@table=\count193
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
@@ -54,23 +54,23 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 \Gin@req@width=\dimen140
 )
 (/usr/share/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count192
+\lst@mode=\count194
 \lst@gtempboxa=\box50
 \lst@token=\toks19
-\lst@length=\count193
+\lst@length=\count195
 \lst@currlwidth=\dimen141
-\lst@column=\count194
-\lst@pos=\count195
+\lst@column=\count196
+\lst@pos=\count197
 \lst@lostspace=\dimen142
 \lst@width=\dimen143
-\lst@newlines=\count196
-\lst@lineno=\count197
+\lst@newlines=\count198
+\lst@lineno=\count199
 \lst@maxwidth=\dimen144
 
 (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count198
-\lst@skipnumbers=\count199
+\c@lstnumber=\count266
+\lst@skipnumbers=\count267
 \lst@framebox=\box51
 )
 (/usr/share/texmf-dist/tex/latex/listings/listings.cfg
@@ -79,13 +79,13 @@ File: listings.cfg 2020/03/24 1.8d listings configuration
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
 
 (/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
+Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
 
 (/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 )
 (/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2020/03/06 v1.0d TeX engine tests
+Package: iftex 2022/02/03 v1.0f TeX engine tests
 )
 (/usr/share/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
@@ -120,17 +120,13 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
 \@linkdim=\dimen145
-\Hy@linkcounter=\count266
-\Hy@pagecounter=\count267
+\Hy@linkcounter=\count268
+\Hy@pagecounter=\count269
 
 (/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2022-02-21 v7.00n Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-)
-(/usr/share/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
-File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
-nguages
 )
 (/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
@@ -138,27 +134,27 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (/usr/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count268
+\Hy@SavedSpaceFactor=\count270
 
 (/usr/share/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2022-02-21 v7.00n Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Hyper figures OFF on input line 4192.
-Package hyperref Info: Link nesting OFF on input line 4197.
-Package hyperref Info: Hyper index ON on input line 4200.
-Package hyperref Info: Plain pages OFF on input line 4207.
-Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Hyper figures OFF on input line 4137.
+Package hyperref Info: Link nesting OFF on input line 4142.
+Package hyperref Info: Hyper index ON on input line 4145.
+Package hyperref Info: Plain pages OFF on input line 4152.
+Package hyperref Info: Backreferencing OFF on input line 4157.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count269
+Package hyperref Info: Bookmarks ON on input line 4390.
+\c@Hy@tempcnt=\count271
 
 (/usr/share/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4804.
+LaTeX Info: Redefining \url on input line 4749.
 \XeTeXLinkMargin=\dimen146
 
 (/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
@@ -168,39 +164,39 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count270
+\Fld@menulength=\count272
 \Field@Width=\dimen147
 \Fld@charsize=\dimen148
-Package hyperref Info: Hyper figures OFF on input line 6076.
-Package hyperref Info: Link nesting OFF on input line 6081.
-Package hyperref Info: Hyper index ON on input line 6084.
-Package hyperref Info: backreferencing OFF on input line 6091.
-Package hyperref Info: Link coloring OFF on input line 6096.
-Package hyperref Info: Link coloring with OCG OFF on input line 6101.
-Package hyperref Info: PDF/A mode OFF on input line 6106.
-LaTeX Info: Redefining \ref on input line 6146.
-LaTeX Info: Redefining \pageref on input line 6150.
+Package hyperref Info: Hyper figures OFF on input line 6027.
+Package hyperref Info: Link nesting OFF on input line 6032.
+Package hyperref Info: Hyper index ON on input line 6035.
+Package hyperref Info: backreferencing OFF on input line 6042.
+Package hyperref Info: Link coloring OFF on input line 6047.
+Package hyperref Info: Link coloring with OCG OFF on input line 6052.
+Package hyperref Info: PDF/A mode OFF on input line 6057.
+LaTeX Info: Redefining \ref on input line 6097.
+LaTeX Info: Redefining \pageref on input line 6101.
 
 (/usr/share/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count271
-\c@Item=\count272
-\c@Hfootnote=\count273
+\Hy@abspage=\count273
+\c@Item=\count274
+\c@Hfootnote=\count275
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
+File: hpdftex.def 2022-02-21 v7.00n Hyperref driver for pdfTeX
 
 (/usr/share/texmf-dist/tex/latex/base/atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count274
-\c@bookmark@seq@number=\count275
+\Fld@listcount=\count276
+\c@bookmark@seq@number=\count277
 
 (/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
@@ -231,8 +227,8 @@ Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
 )
 (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2021-12-14 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count276
+File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count278
 \l__pdf_internal_box=\box52
 ) (./main.aux
 (./TeX_files/chapter01.aux) (./TeX_files/chapter02.aux
@@ -339,6 +335,24 @@ LaTeX Warning: Label `cod1' multiply defined.
 
 LaTeX Warning: Label `cod1' multiply defined.
 
+
+LaTeX Warning: Label `cod1' multiply defined.
+
+
+LaTeX Warning: Label `cod1' multiply defined.
+
+
+LaTeX Warning: Label `cod1' multiply defined.
+
+
+LaTeX Warning: Label `cod1' multiply defined.
+
+
+LaTeX Warning: Label `cod1' multiply defined.
+
+
+LaTeX Warning: Label `cod1' multiply defined.
+
 ) (./Tex_files/chapter05.aux))
 \openout1 = `main.aux'.
 
@@ -363,16 +377,16 @@ LaTeX Font Info:    ... okay on input line 39.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count277
+\scratchcounter=\count279
 \scratchdimen=\dimen149
 \scratchbox=\box53
-\nofMPsegments=\count278
-\nofMParguments=\count279
+\nofMPsegments=\count280
+\nofMParguments=\count281
 \everyMPshowfont=\toks20
-\MPscratchCnt=\count280
+\MPscratchCnt=\count282
 \MPscratchDim=\dimen150
-\MPnumerator=\count281
-\makeMPintoPDFobject=\count282
+\MPnumerator=\count283
+\makeMPintoPDFobject=\count284
 \everyMPtoPDFconversion=\toks21
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -383,7 +397,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count283
+\c@lstlisting=\count285
 Package hyperref Info: Link coloring OFF on input line 39.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -395,7 +409,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count284
+\c@section@level=\count286
 )
 LaTeX Info: Redefining \ref on input line 39.
 LaTeX Info: Redefining \pageref on input line 39.
@@ -444,6 +458,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
 
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 5.
 (./codici/codice.cxx)) [5
 
 
@@ -458,53 +474,41 @@ Chapter 2.
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 45--49
+Underfull \hbox (badness 10000) in paragraph at lines 49--53
 
  []
 
 [8] [9]
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 7
-5.
+9.
  (/usr/share/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 75.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 79.
  [10]
-Overfull \hbox (8.84308pt too wide) in paragraph at lines 104--105
+Overfull \hbox (8.84308pt too wide) in paragraph at lines 108--109
 \OT1/cmr/m/n/12 per uti-liz-zare un parametro all'interno di una fun-zione defi
 nita dall'utente
  []
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 159--161
+[11] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 163--165
 
  []
 
-[12] [13] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 233--235
+[13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 237--239
 
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 243--244
+Underfull \hbox (badness 10000) in paragraph at lines 247--248
 
  []
 
-[16]
-Overfull \hbox (3.55563pt too wide) in paragraph at lines 276--277
-\OT1/cmr/m/n/12 lista delle vari-abili in-vece: non ^^Re nec-es-sario speci-fi-
-carne il nu-mero, nell'esempio
- []
-
-[17]
-Overfull \hbox (20.6888pt too wide) in paragraph at lines 281--282
-\OT1/cmr/m/n/12 sario sp-ci-fi-care quale/i ver-sioni si desidera elim-inare, c
-hia-mare un Delete("nome")
- []
-
-[18] [19]
-Underfull \hbox (badness 10000) in paragraph at lines 341--342
+[16] [17] [18] [19]
+Underfull \hbox (badness 10000) in paragraph at lines 345--346
 
  []
 
@@ -557,13 +561,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 097D42E3A9B73E88883DC060E14EF5CE;4571.
  ) 
 Here is how much of TeX's memory you used:
- 11114 strings out of 478353
- 169958 string characters out of 5854635
- 750820 words of memory out of 5000000
- 28847 multiletter control sequences out of 15000+600000
- 410230 words of font info for 50 fonts, out of 8000000 for 9000
+ 11097 strings out of 478276
+ 169712 string characters out of 5853013
+ 771041 words of memory out of 5000000
+ 28897 multiletter control sequences out of 15000+600000
+ 476059 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,8n,69p,864b,1872s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,8n,69p,864b,1947s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/publi
@@ -573,10 +577,10 @@ hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (29 pages, 184339 bytes).
+Output written on main.pdf (29 pages, 185979 bytes).
 PDF statistics:
- 577 PDF objects out of 1000 (max. 8388607)
- 520 compressed objects within 6 object streams
- 243 named destinations out of 1000 (max. 500000)
+ 597 PDF objects out of 1000 (max. 8388607)
+ 540 compressed objects within 6 object streams
+ 259 named destinations out of 1000 (max. 500000)
  241 words of extra memory for PDF output out of 10000 (max. 10000000)
 

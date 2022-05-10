@@ -41,9 +41,13 @@ Vediamo ora le funzioni principali dell'oggetto:
 	h->GetMaximumBin(); //ritorna il bin contenente il massimo
 	h->GetMaximum(); //ritorna i conteggi del bin piu alto
 	h->GetBinContent(n); // ritorna il conteggio del bin n
+	h->GetMean(); //media 
+	h->GetMeanError(); //errore media  
+	h->GetStdDev(); //deviazione standard
+	h->GetStdDevError(); //errore sulla devstd
 \end{lstlisting}
 {\color{red} \rule{\linewidth}{0.5mm}}
-\textcolor{red}{\textbf{Attenzione:}} le funzioni GetMaximum() e GetMaximumBin() lavorano nel range in cui l'istogramma è definito. Se però ad esempio durante l'analisi fai uno zoom sul canvas con il mouse GetMaximum() e GetMaximumBin() lavorano nel range che vedi nel canvas (quello zoomato, NON tutto l'istogramma).\\
+\textcolor{red}{\textbf{Attenzione:}} tutte le funzioni che iniziano con Get lavorano nel range in cui l'istogramma è definito. Se però ad esempio durante l'analisi fai uno zoom sul canvas con il mouse lavorano nel range che vedi nel canvas (quello zoomato, NON tutto l'istogramma) quindi attento al range che utilizzi quando le chiami.\\
 {\color{red} \rule{\linewidth}{0.5mm}}
 Viste queste funzioni più basilari vediamone alcune più articolate:\\
 \begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
@@ -273,12 +277,11 @@ Vediamo ora il costruttore di questo oggetto.
 \begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
 	TNtuple *nt = new TNtuple("ntName","titolo","var1:var2:var3");
 \end{lstlisting}
-I primi due argomenti sono intuitivi e non necessitano di spiegazioni, per la lista delle variabili invece: non è necessario specificarne il numero, nell'esempio del costruttore ce ne sono tre per caso, potevano essere due o quattro. Invece di procedere in casi generali vediamo attraverso un esempio il loro utilizzo.
+I primi due argomenti sono intuitivi e non necessitano di spiegazioni, per la lista delle variabili invece: non ce nè un numero massimo o minimo, nell'esempio del costruttore ce ne sono tre per caso, potevano essere due, quattro ecc... Invece di procedere in casi generali vediamo attraverso un esempio il loro utilizzo.
 \begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
 	TNtuple *nt = new TNtuple("event_decay","posizione decadimenti","n_eve:x:y:z"); //costruttore
 	nt->GetEntries() //stampa il numero di eventi inseriti
 \end{lstlisting}
-Inoltre quando in un TFile sono presenti più versioni di un oggetto è necessario spcificare quale/i versioni si desidera eliminare, chiamare un Delete("nome") generico non avrà alcun effetto.
 
 
 \subsection{Inserimento e recupero dati}
@@ -294,6 +297,7 @@ Il file in questo caso dovrà essere nel formato:\\
 n\_eve x y z\\
 n\_eve x y z\\
 .....\\
+La lettura ignorerà le righe che inizano per \# interpretandole come commenti
 È poi possiile recuperare i dati inseriti nel modo seguente:
 \begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
 	float ex,ey,ez;

@@ -16,14 +16,33 @@ La funzione per eseguire il fit base dell'oggetto h attraverso il TF1 f è:
 \end{lstlisting}
 L'algoritmo di defaul per trovare i parametri ricercati è la minimizzazione del $\chi^2$. Il range predefinito è quello di definizione dell'istogramma. Ultima cosa a cui presare attenzione è che in questo modo verrà memorizzato solo l'ultimo fit eseguito rimuovendo i precedenti, se quindi si volessero fare più fit su uno stesso grafico sarà necessario cambiare le opzioni manualmente.\\
 \section{Fit options}
-Le opzioni più utili sono:
+La sintassi per inserire opzioni aggiuntive nel fit è la seguente:
+\begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
+	h->Fitt(f,"opzione")
+\end{lstlisting}
+Nell'esempio si sottointende che si vuole fittare un generico oggetto h, che sia un istogramma, un grafico ecc... con una generica funzione f. Vediamo le opzioni che possono tornare utili più spesso:
 \begin{itemize}
 	\item "R" : prende il range di definizione del TF1, fa il fit solo per i punti in quell'intervallo, e stampa il grafico in quell'intervallo
+\begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
+	h->Fitt(f,"R");
+\end{lstlisting}
 	\item "+" : se sono stati fatti fit precedenti, solitamente viene stampato solo l'ultimo, se invece metti il + allora questo fit non sovrascive i precedenti e nel plot lì troverai tutti
+\begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
+h->Fitt(f,"+");
+\end{lstlisting}
 	\item "0" : se vuoi fare il fit, ma vuoi evitare di stamparlo sul plot
+\begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
+	h->Fitt(f,"0");
+\end{lstlisting}
 	\item "S" : nel ritornare i risultati (vedi gestione risultati) nel TFitResult vengono salvate tutti le possibili informazioni, tra cui la matrice di covarianza, alla quale normalmente non sarebbe possibile accedere
+\begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
+	h->Fitt(f,"S");
+\end{lstlisting}
 \end{itemize}
-
+Se si volesse usare più di una opzione è sufficiente metterle in fila come segue:
+\begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
+	h->Fitt(f,"RS+");
+\end{lstlisting}
 \subsection{Gestione dei risultati}
 La funzione Fit oltre a fare il fit ritorna anche un oggetto specifico per la gestione dei risultati di quest'ultimo (TFitResultPtr, che è essenzialmente un puntatore ad un oggetto di tipo TFitResult). Il modo più rapido quindi per recuperare tutte le informazioni rilevanti è il seguente:
 \begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
