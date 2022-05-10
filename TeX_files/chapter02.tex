@@ -278,13 +278,12 @@ Vediamo ora il costruttore di questo oggetto.
 	TNtuple *nt = new TNtuple("ntName","titolo","var1:var2:var3");
 \end{lstlisting}
 I primi due argomenti sono intuitivi e non necessitano di spiegazioni, per la lista delle variabili invece: non ce nè un numero massimo o minimo, nell'esempio del costruttore ce ne sono tre per caso, potevano essere due, quattro ecc... Invece di procedere in casi generali vediamo attraverso un esempio il loro utilizzo.
-\begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
-	TNtuple *nt = new TNtuple("event_decay","posizione decadimenti","n_eve:x:y:z"); //costruttore
-	nt->GetEntries() //stampa il numero di eventi inseriti
-\end{lstlisting}
 
 
 \subsection{Inserimento e recupero dati}
+\begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
+	TNtuple *nt = new TNtuple("event_decay","posizione decadimenti","n_eve:x:y:z"); //costruttore
+\end{lstlisting}
 I principali metodi di inserimento sono due; evento per evento attraverso la funzione Fill
 \begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
 	nt->Fill(0,0.3,0.1,-0.25); // inserisce un set di valori
@@ -295,10 +294,11 @@ Oppure leggendo un file di input
 \end{lstlisting}
 Il file in questo caso dovrà essere nel formato:\\
 n\_eve x y z\\
+\# commento\\
 n\_eve x y z\\
 .....\\
 La lettura ignorerà le righe che inizano per \# interpretandole come commenti
-È poi possiile recuperare i dati inseriti nel modo seguente:
+È poi possibile recuperare i dati inseriti nel modo seguente:
 \begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
 	float ex,ey,ez;
 	nt->SetBranchAddress("x",&ex);
@@ -314,6 +314,7 @@ Fino ad ora abbiamo visto comandi utili da inserire in un .cc da compilare per t
 	nt->Print(); // stampa le informazioni sul contenuto
 	nt->Scan();  // stampa tutto il contenuto
 	nt->Scan("x") // stampa tutti i valori di x
+	nt->GetEntries() //stampa il numero di eventi inseriti
 \end{lstlisting}
 È poi possibile accedere ai vari eventi sempre stampandoli sullo schermo in base alla "posizione" all'interno del TNtuple. Il primo inserito è lo 0, il secondo è l'1 e così via:
 \begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
