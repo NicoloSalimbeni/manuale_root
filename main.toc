@@ -10,7 +10,7 @@
 \contentsline {section}{\numberline {2.3}TGraph}{10}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}TGraphErrors}{10}{subsection.2.3.1}%
 \contentsline {section}{\numberline {2.4}TF1}{10}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Vari modi per definire la funzione che si vuole usare}{10}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.1}Vari modi per definire la funzione che si vuole usare}{11}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Valutare un funzione e le sue derivate}{12}{subsection.2.4.2}%
 \contentsline {section}{\numberline {2.5}TFile}{13}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}Scrittura e creazione}{13}{subsection.2.5.1}%
@@ -18,13 +18,13 @@
 \contentsline {section}{\numberline {2.6}Gestione oggetti all'interno di un TFile}{15}{section.2.6}%
 \contentsline {section}{\numberline {2.7}TNtuple}{17}{section.2.7}%
 \contentsline {subsection}{\numberline {2.7.1}Inserimento e recupero dati}{18}{subsection.2.7.1}%
-\contentsline {subsection}{\numberline {2.7.2}Stampare a schermo informazioni utili}{18}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.2}Stampare a schermo informazioni utili}{19}{subsection.2.7.2}%
 \contentsline {subsection}{\numberline {2.7.3}Ricavare grafici da un TNtuple}{19}{subsection.2.7.3}%
 \contentsline {section}{\numberline {2.8}TTree}{20}{section.2.8}%
-\contentsline {subsection}{\numberline {2.8.1}Recupero dati salvati in un TTree}{20}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.1}Recupero dati salvati in un TTree}{21}{subsection.2.8.1}%
 \contentsline {chapter}{\numberline {3}PLOT GRAFICI TODO}{23}{chapter.3}%
 \contentsline {chapter}{\numberline {4}FIT}{25}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Fit options}{26}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Gestione dei risultati}{26}{subsection.4.1.1}%
-\contentsline {section}{\numberline {4.2}Tips}{26}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Tips}{27}{section.4.2}%
 \contentsline {chapter}{\numberline {5}CONCLUSIONI TODO}{29}{chapter.5}%

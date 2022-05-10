@@ -41,9 +41,13 @@ Vediamo ora le funzioni principali dell'oggetto:
 	h->GetMaximumBin(); //ritorna il bin contenente il massimo
 	h->GetMaximum(); //ritorna i conteggi del bin piu alto
 	h->GetBinContent(n); // ritorna il conteggio del bin n
+	h->GetMean(); //media 
+	h->GetMeanError(); //errore media  
+	h->GetStdDev(); //deviazione standard
+	h->GetStdDevError(); //errore sulla devstd
 \end{lstlisting}
 {\color{red} \rule{\linewidth}{0.5mm}}
-\textcolor{red}{\textbf{Attenzione:}} le funzioni GetMaximum() e GetMaximumBin() lavorano nel range in cui l'istogramma è definito. Se però ad esempio durante l'analisi fai uno zoom sul canvas con il mouse GetMaximum() e GetMaximumBin() lavorano nel range che vedi nel canvas (quello zoomato, NON tutto l'istogramma).\\
+\textcolor{red}{\textbf{Attenzione:}} tutte le funzioni che iniziano con Get lavorano nel range in cui l'istogramma è definito. Se però ad esempio durante l'analisi fai uno zoom sul canvas con il mouse lavorano nel range che vedi nel canvas (quello zoomato, NON tutto l'istogramma) quindi attento al range che utilizzi quando le chiami.\\
 {\color{red} \rule{\linewidth}{0.5mm}}
 Viste queste funzioni più basilari vediamone alcune più articolate:\\
 \begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
@@ -265,7 +269,7 @@ in questo modo si copia l'oggetto, gli si da un nome personalizzato, lo si salva
 	f->Delete("*;1") //cancella la versione 1 di tutti gli oggetti
 	f->Delete("nome;*") // cancella tutte le versioni di "nome"
 \end{lstlisting}
-
+Inoltre quando in un TFile sono presenti più versioni di un oggetto è necessario spcificare quale/i versioni si desidera eliminare, chiamare un Delete("nome") generico non avrà alcun effetto.
 \section{TNtuple}
 Questo oggetto risulta particolarmente utile per la gestione dei dati da analizzare. Serve per memorizzare in modo efficiente e pratico dei set di dati, come potrebbero essere delle cordinate spaziali (x,y,z) per un numero n (non necessariamnete noto) di eventi. Si può così evitare di dover definire 3 vettori per le varie coordinate, potendo gestire tutti i dati con un solo oggetto.\\
 La limitazione più importante è che i TNtuple sono degli oggetti "write-once, read many times", di conseguenza un TNtuple non può essere modificato, l'unico modo per "modificarlo" è copiarlo in uno nuovo modificandolo come si vuole. Altra sottigliezza invece è il tipo dei dati da registare, per le TNtuple i valori devono essere dei float (Float\_t per la precizione), si può avere maggere precisione utilizzando i TNtupleD con dei Double\_t, ma in genereale non si possono salvare elementi con un tipo arbitrario. Per questo vedremo i TTree successivamente.\\
@@ -273,7 +277,7 @@ Vediamo ora il costruttore di questo oggetto.
 \begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
 	TNtuple *nt = new TNtuple("ntName","titolo","var1:var2:var3");
 \end{lstlisting}
-I primi due argomenti sono intuitivi e non necessitano di spiegazioni, per la lista delle variabili invece: non è necessario specificarne il numero, nell'esempio del costruttore ce ne sono tre per caso, potevano essere due o quattro. Invece di procedere in casi generali vediamo attraverso un esempio il loro utilizzo.
+I primi due argomenti sono intuitivi e non necessitano di spiegazioni, per la lista delle variabili invece: non ce nè un numero massimo o minimo, nell'esempio del costruttore ce ne sono tre per caso, potevano essere due, quattro ecc... Invece di procedere in casi generali vediamo attraverso un esempio il loro utilizzo.
 \begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
 	TNtuple *nt = new TNtuple("event_decay","posizione decadimenti","n_eve:x:y:z"); //costruttore
 	nt->GetEntries() //stampa il numero di eventi inseriti
@@ -293,6 +297,7 @@ Il file in questo caso dovrà essere nel formato:\\
 n\_eve x y z\\
 n\_eve x y z\\
 .....\\
+La lettura ignorerà le righe che inizano per \# interpretandole come commenti
 È poi possiile recuperare i dati inseriti nel modo seguente:
 \begin{lstlisting}[language=C++,label={cod1},mathescape=true,breaklines=true]
 	float ex,ey,ez;
