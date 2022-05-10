@@ -18,7 +18,7 @@
 \contentsline {section}{\numberline {2.6}Gestione oggetti all'interno di un TFile}{15}{section.2.6}%
 \contentsline {section}{\numberline {2.7}TNtuple}{17}{section.2.7}%
 \contentsline {subsection}{\numberline {2.7.1}Inserimento e recupero dati}{18}{subsection.2.7.1}%
-\contentsline {subsection}{\numberline {2.7.2}Stampare a schermo informazioni utili}{18}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.2}Stampare a schermo informazioni utili}{19}{subsection.2.7.2}%
 \contentsline {subsection}{\numberline {2.7.3}Ricavare grafici da un TNtuple}{19}{subsection.2.7.3}%
 \contentsline {section}{\numberline {2.8}TTree}{20}{section.2.8}%
 \contentsline {subsection}{\numberline {2.8.1}Recupero dati salvati in un TTree}{21}{subsection.2.8.1}%
