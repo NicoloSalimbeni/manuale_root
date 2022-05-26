@@ -343,7 +343,8 @@ Altra nota è che in questo modo non possono essere estratti dei TGraph, per far
 	nt->Draw("py:px","pz>4");
 	TGraph *gr = new TGraph(nt->GetSelectedRows(), nt->GetV2(), nt->GetV1());
 \end{lstlisting}
-Per non scendere nei dettagli (che non so nemmeno io) basta sapere che prima è necessario lanciare Draw(), in questo modo viene salvata la selezione, poi poi bisogna costruire il TGraph.\\
+Per non scendere nei dettagli (che non sappiamo nemmeno noi) basta sapere che prima è necessario lanciare Draw("var1:var2:var3:...") con all'interno lisate le variabili che vuoi plottare. in questo modo viene salvata la selezione, poi poi bisogna costruire il TGraph.\\
+
 \section{TTree}
 I TTree sono oggetti simili agli TNtuple, ma più generali, permettendo di mettere in memoria oggetti di un tipo qualunque.
 Come suggerisce il nome sono costruiti in analogia con un albero. L'albero generale (TTree) è l'oggetto che contiene tutte le informazioni, queste si dividono in rami (TBranch) che a loro volta possono contenere più elementi dello stesso tipo (che siano vettori, strutture o double). I singoli elementi all'interno di un TBranch sono detti leaves (foglie). Un albero puo avere più rami, uno che magari contiene dei vettori, uno che contiene strutture e così via.\\
