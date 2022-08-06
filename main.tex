@@ -3,8 +3,13 @@
 \usepackage{graphicx}
 \usepackage{listings} %serve per importare il codice
 \usepackage{hyperref}
-\usepackage{xcolor}   %scritte colorate 
+\usepackage{xcolor}   %scritte colorate
 
+\usepackage{zref-xr}
+\zexternaldocument{./Tex_files/chapter01}
+\zexternaldocument{./Tex_files/chapter02}
+\zexternaldocument{./Tex_files/chapter03}
+\zexternaldocument{./Tex_files/chapter04}
 
 \renewcommand\lstlistingname{Codice}
 
@@ -50,6 +55,5 @@
 \include{./TeX_files/chapter02}
 \include{./TeX_files/chapter03}
 \include{./TeX_files/chapter04}
-\include{./Tex_files/chapter05}
 
 \end{document}

@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.4.18)  10 MAY 2022 14:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.6.11)  7 AUG 2022 01:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
 LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-02-24>
+L3 programming layer <2022-04-10>
 (/usr/share/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2021/10/04 v1.4n Standard LaTeX document class
 (/usr/share/texmf-dist/tex/latex/base/bk12.clo
@@ -226,9 +226,42 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
 )
+(/usr/share/texmf-dist/tex/latex/zref/zref-xr.sty
+Package: zref-xr 2022-04-07 v2.34 Module xr for zref (HO)
+
+(/usr/share/texmf-dist/tex/latex/zref/zref-base.sty
+Package: zref-base 2022-04-07 v2.34 Module base for zref (HO)
+Package zref Info: New property list: main on input line 768.
+Package zref Info: New property: default on input line 769.
+Package zref Info: New property: page on input line 770.
+)
+Package zref Info: New property: url on input line 59.
+Package zref Info: New property: urluse on input line 60.
+Package zref Info: New property: externaldocument on input line 61.
+\ZREF@xr@URL=\count278
+)
+Package zref Info: New property: anchor on input line 9.
+Package zref Info: New property: title on input line 9.
+
+
+Package zref-xr Warning: File `./Tex_files/chapter01.aux' not found or empty,
+(zref-xr)                labels not imported on input line 10.
+
+
+Package zref-xr Warning: File `./Tex_files/chapter02.aux' not found or empty,
+(zref-xr)                labels not imported on input line 11.
+
+
+Package zref-xr Warning: File `./Tex_files/chapter03.aux' not found or empty,
+(zref-xr)                labels not imported on input line 12.
+
+
+Package zref-xr Warning: File `./Tex_files/chapter04.aux' not found or empty,
+(zref-xr)                labels not imported on input line 13.
+
 (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count278
+File: l3backend-pdftex.def 2022-04-14 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count279
 \l__pdf_internal_box=\box52
 ) (./main.aux
 (./TeX_files/chapter01.aux) (./TeX_files/chapter02.aux
@@ -353,40 +386,48 @@ LaTeX Warning: Label `cod1' multiply defined.
 
 LaTeX Warning: Label `cod1' multiply defined.
 
-) (./Tex_files/chapter05.aux))
+
+LaTeX Warning: Label `cod1' multiply defined.
+
+
+LaTeX Warning: Label `cod1' multiply defined.
+
+
+LaTeX Warning: Label `cod1' multiply defined.
+
+))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-
-(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+ (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count279
+\scratchcounter=\count280
 \scratchdimen=\dimen149
 \scratchbox=\box53
-\nofMPsegments=\count280
-\nofMParguments=\count281
+\nofMPsegments=\count281
+\nofMParguments=\count282
 \everyMPshowfont=\toks20
-\MPscratchCnt=\count282
+\MPscratchCnt=\count283
 \MPscratchDim=\dimen150
-\MPnumerator=\count283
-\makeMPintoPDFobject=\count284
+\MPnumerator=\count284
+\makeMPintoPDFobject=\count285
 \everyMPtoPDFconversion=\toks21
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -397,8 +438,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count285
-Package hyperref Info: Link coloring OFF on input line 39.
+\c@lstlisting=\count286
+Package hyperref Info: Link coloring OFF on input line 44.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -409,20 +450,20 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count286
+\c@section@level=\count287
 )
-LaTeX Info: Redefining \ref on input line 39.
-LaTeX Info: Redefining \pageref on input line 39.
-LaTeX Info: Redefining \nameref on input line 39.
+LaTeX Info: Redefining \ref on input line 44.
+LaTeX Info: Redefining \pageref on input line 44.
+LaTeX Info: Redefining \nameref on input line 44.
 
 (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 47.
+(Font)              <14.4> on input line 52.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 47.
+(Font)              <7> on input line 52.
  [1
 
 
@@ -538,39 +579,20 @@ Chapter 3.
 
 ]
 Chapter 4.
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--18
-
- []
-
-
-Underfull \vbox (badness 3128) has occurred while \output is active []
-
- [25]
-[26]) [27]
-\openout2 = `./Tex_files/chapter05.aux'.
-
- (./Tex_files/chapter05.tex [28
-
-
-
-
-]
-Chapter 5.
-) [29] (./main.aux (./TeX_files/chapter01.aux) (./TeX_files/chapter02.aux)
-(./TeX_files/chapter03.aux) (./TeX_files/chapter04.aux)
-(./Tex_files/chapter05.aux))
+[25] [26] [27]) [28] (./main.aux (./TeX_files/chapter01.aux)
+(./TeX_files/chapter02.aux) (./TeX_files/chapter03.aux)
+(./TeX_files/chapter04.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 097D42E3A9B73E88883DC060E14EF5CE;4571.
+(rerunfilecheck)             Checksum: EE2B6B9AC36313C7059D974B90B5DB58;4881.
  ) 
 Here is how much of TeX's memory you used:
- 11097 strings out of 478276
- 169712 string characters out of 5853013
- 780041 words of memory out of 5000000
- 28897 multiletter control sequences out of 15000+600000
+ 11357 strings out of 478238
+ 174096 string characters out of 5850456
+ 785701 words of memory out of 5000000
+ 29180 multiletter control sequences out of 15000+600000
  476059 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,8n,69p,864b,1947s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -583,10 +605,10 @@ hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (29 pages, 186101 bytes).
+Output written on main.pdf (28 pages, 188099 bytes).
 PDF statistics:
- 597 PDF objects out of 1000 (max. 8388607)
- 540 compressed objects within 6 object streams
- 259 named destinations out of 1000 (max. 500000)
- 241 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 609 PDF objects out of 1000 (max. 8388607)
+ 553 compressed objects within 6 object streams
+ 267 named destinations out of 1000 (max. 500000)
+ 249 words of extra memory for PDF output out of 10000 (max. 10000000)
 

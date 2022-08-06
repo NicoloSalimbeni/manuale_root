@@ -82,7 +82,7 @@ Quando un istogramma viene stampato con Draw in automatico viene creato un box c
 
 \subsection{TGraphErrors}
 
-\section{TF1}
+\section{TF1} 
 Per definire una funzione uno dimensionale definita in un certo range può essere utilizzata la classa TF1.
 \begin{lstlisting}[language=C++]
 	TF1* f=new TF1("funzione","3*x+2",-10,10);
@@ -93,7 +93,7 @@ vediamo i parametri uno per uno
 	\item "3*x+2": tra le virgolette va messa la funzione da utilizzare, ne parleremo più dettagliatamente in seguito.
 	\item -10,10 : questo è il range, si possono mettere sia interi che double, non deve essere per forza simmetrico, ed è il range che viene utilizzato poi per stampare la funzione se la si vuole plottare.
 \end{itemize}
-\subsection{Vari modi per definire la funzione che si vuole usare}
+\subsection{Vari modi per definire la funzione che si vuole usare} \label{TF1_section}
 \begin{itemize}
 	\item \textbf{FUNZIONE INLNIE:} la funzione può essere definita direttamente dall'utente senza usare funzioni predefinite, in questo modo metodo rientra anche l'utilizzo delle funzione sin() cos() log() log(10) exp() ecc... la sintassi è la seguente:
 \begin{lstlisting}[language=C++]
